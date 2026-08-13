@@ -35,6 +35,9 @@ button:disabled { cursor: not-allowed; filter: grayscale(.65); opacity: .5; }
 .menu-actions { position: absolute; left: 50%; bottom: 3.2%; transform: translateX(-50%); display: grid; justify-items: center; gap: .65vw; width: 31%; }
 .menu-actions .big { width: 100%; height: 6.1vw; font-size: 2.25vw; border-width: .48vw; }
 .menu-actions .secondary { height: 4.1vw; width: 58%; }
+.author-link { padding: .35vw .85vw; border-radius: 1vw; color: #d8faff; background: rgba(5, 30, 75, .74); font-size: .8vw; line-height: 1.25; text-decoration: none; letter-spacing: .06vw; text-shadow: 0 .1vw .16vw #183273; transition: color .15s, background .15s, transform .15s; }
+.author-link:hover { color: white; background: rgba(25, 74, 142, .92); transform: translateY(-.08vw); }
+.author-link:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
 .save-history { position: absolute; z-index: 8; left: 1.4%; top: 14%; width: 27%; height: 24%; padding: 1vw 1.2vw; border-width: .2vw; border-radius: 1.4vw; }
 .save-history-title { display: flex; align-items: center; justify-content: space-between; gap: .5vw; }
 .save-history h2 { margin: 0; color: #aefaff; font-size: 1.15vw; font-weight: 400; }
