@@ -273,7 +273,11 @@ function Menu({ saves, onLoad, onClear, onStart, onHow }: { saves: SaveSlot[]; o
     <div className="menu-title"><h1>BOB &amp; DAN</h1><p>THE <b>b–d</b> ADVENTURE</p></div>
     <img className="menu-bob" src={`${ASSETS}/characters/bob.png`} alt="Bob the beaver" />
     <img className="menu-dan" src={`${ASSETS}/characters/dan.png`} alt="Dan the dragon" />
-    <div className="menu-actions"><button className="primary big" onClick={onStart}>START GAME</button><button className="secondary" onClick={onHow}>HOW TO PLAY</button></div>
+    <div className="menu-actions">
+      <button className="primary big" onClick={onStart}>START GAME</button>
+      <button className="secondary" onClick={onHow}>HOW TO PLAY</button>
+      <a className="author-link" href="https://vk.ru/speaky_swan" target="_blank" rel="noreferrer">GAME BY SPEAKY SWAN</a>
+    </div>
     <div className="glass save-history"><div className="save-history-title"><h2>SAVED GAMES</h2>{saves.length > 0 && <button onClick={onClear}>DELETE ALL</button>}</div>{saves.length === 0 ? <p>NO SAVED GAMES YET</p> : <div className="save-list">{saves.map(slot => <div className="save-row" key={slot.id}><button className="load-save" onClick={() => onLoad(slot)}><strong>{slot.state.players.map(player => player.name).join(', ') || 'Adventure'}</strong><span>{new Intl.DateTimeFormat(undefined, { dateStyle: 'short', timeStyle: 'short' }).format(new Date(slot.createdAt))}</span><small>{slot.state.screen === 'level' ? `LEVEL ${slot.state.currentLevel + 1} · ${slot.state.turnIndex + 1} / 7` : slot.state.screen.toUpperCase()}</small></button></div>)}</div>}</div>
   </section>
 }
