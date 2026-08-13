@@ -3,7 +3,7 @@ import { levels, pictureMap, positiveFeedback, retryFeedback } from './game/data
 import { currentPlayerIndex, generateTasks, rankPlayers, shuffle, starsForMistakes } from './game/logic'
 import type { GameState, Letter, Player, SaveSlot, Screen } from './game/types'
 
-const ASSETS = '/game-assets'
+const ASSETS = `${import.meta.env.BASE_URL}game-assets`
 const STORAGE_KEY = 'bob-and-dan-game-v1'
 const SAVES_KEY = 'bob-and-dan-saves-v1'
 
